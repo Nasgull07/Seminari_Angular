@@ -1,8 +1,11 @@
 export interface User {
-    id: number;
+    _id: string;
     name: string;
-    age: number;
     email: string;
+    password: string;
+    phone: string;
+    wallet: number;
+    Flag: boolean;
   }
 export class User implements User {
     constructor(     

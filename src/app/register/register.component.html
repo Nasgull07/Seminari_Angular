@@ -2,10 +2,10 @@
   <h2>Register</h2>
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div>
-      <label for="username">Username</label>
-      <input type="text" id="username" formControlName="username">
-      <div *ngIf="submitted && f['username'].errors" class="error">
-        <div *ngIf="f['username'].errors['required']">Username is required</div>
+      <label for="name">Username</label>
+      <input type="text" id="name" formControlName="name">
+      <div *ngIf="submitted && f['name'].errors" class="error">
+        <div *ngIf="f['name'].errors['required']">Username is required</div>
       </div>
     </div>
     <div>
@@ -24,7 +24,14 @@
         <div *ngIf="f['password'].errors['minlength']">Password must be at least 6 characters</div>
       </div>
     </div>
+    <div>
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" formControlName="phone">
+      <div *ngIf="submitted && f['phone'].errors" class="error">
+        <div *ngIf="f['phone'].errors['required']">Phone number is required</div>
+        <div *ngIf="f['phone'].errors['pattern']">Phone number must be valid</div>
+      </div>
+    </div>
     <button type="submit">Register</button>
   </form>
-  
 </div>

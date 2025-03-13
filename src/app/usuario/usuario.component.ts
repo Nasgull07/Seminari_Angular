@@ -16,10 +16,13 @@ export class UsuarioComponent {
   mostrardata: boolean;
   
   usuario: User = {
-    id: 1,
+    _id: "1",
     name: "Toni",
-    age: 40,
-    email: "toni.oller@gmail.com",
+    email: "toni@gmail.com",
+    password: "1234",
+    phone: "40",
+    wallet: 0,
+    Flag: true
   };
   
   constructor() {      
